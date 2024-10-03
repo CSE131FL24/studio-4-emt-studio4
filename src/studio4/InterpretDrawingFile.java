@@ -25,36 +25,35 @@ public class InterpretDrawingFile {
 		int red = in.nextInt();
 		int green = in.nextInt();
 		int blue = in.nextInt();
-		boolean filled = in.nextBoolean();
 		Color col = new Color(red, green, blue); 
 		
 		StdDraw.setPenColor(col);
-//		if (filled == true) {
-//			if (shape == "ellipse") { //draws a filled ellipse
-//				StdDraw.filledEllipse(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
-//			}
-//			else if (shape == "rectangle") { //draws a filled rectangle
-//				StdDraw.filledRectangle(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
-//			}
-//			else if (shape == "triangle") { //draws a filled triangle
-//				double[] x = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
-//				double[] y = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
-//				StdDraw.filledPolygon(x, y);
-//			}
-//		}
-//		
-//		else {
-//			if (shape == "ellipse") { //draws a filled ellipse
-//				StdDraw.ellipse(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
-//			}
-//			else if (shape == "rectangle") { //draws a filled rectangle
-//				StdDraw.rectangle(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
-//			}
-//			else if (shape == "triangle") { //draws a filled triangle
-//				double[] x = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
-//				double[] y = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
-//				StdDraw.polygon(x, y);
-//			}
+		if (in.nextBoolean() == true) {
+			if (shape .equals("ellipse")) { //draws a filled ellipse
+				StdDraw.filledEllipse(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
+			}
+			else if (shape .equals("rectangle")) { //draws a filled rectangle
+				StdDraw.filledRectangle(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
+			}
+			else if (shape .equals("triangle")) { //draws a filled triangle
+				double[] x = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
+				double[] y = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
+				StdDraw.filledPolygon(x, y);
+			}
+		}
 		
+		else {
+			if (shape .equals("ellipse")) { //draws a filled ellipse
+				StdDraw.ellipse(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
+			}
+			else if (shape .equals("rectangle")) { //draws a filled rectangle
+				StdDraw.rectangle(in.nextDouble(), in.nextDouble(), in.nextDouble(), in.nextDouble());
+			}
+			else if (shape .equals("triangle")) { //draws a filled triangle
+				double[] x = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
+				double[] y = {in.nextDouble(), in.nextDouble(), in.nextDouble()};
+				StdDraw.polygon(x, y);
+			}
+		}
 	}
 }
